@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+marquee {
+    font-family: 'Open Sans', sans-serif;
+}
+
+progress {
+    width: 80%;
+    height: 20px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #fffacd; /* Light yellow color */
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px; /* Adjust padding as needed */
+}
+button {
+    width: 75px;
+    height: 25px;
+}
