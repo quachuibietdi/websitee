@@ -1,52 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+/* ================= RESET & BASE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fff9c4, #ffe082);
+    color: #5f4b00;
 }
-h1 {
-    font-family: 'Roboto', sans-serif;
+
+/* ================= TYPOGRAPHY ================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: #6d4c00;
 }
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 marquee {
     font-family: 'Open Sans', sans-serif;
+    color: #6d4c00;
 }
 
-progress {
-    width: 80%;
-    height: 20px;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 20px;
+/* ================= MENU BAR ================= */
+.menu-bar {
+    height: 80px;
+    width: 100%;
+    background-color: #fbc02d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.menu-bar h1 {
+    margin: 0; /* FIX logo trôi */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #5f4b00;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar ul li {
+    padding: 10px 25px;
+    position: relative;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #5f4b00;
+    transition: 0.3s;
+}
+
+.menu-bar ul li a:hover {
+    color: #ffffff;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
-    right: 0;
-    background-color: #f3f3f3;
+    background-color: #fffde7;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    display: block;
+}
+
+.dropdown-menu ul li {
+    width: 180px;
+    padding: 10px;
+}
+
+.dropdown-menu ul li a {
+    color: #5f4b00;
+}
+
+/* ================= BUTTON ================= */
+.button {
+    background-color: #fff3cd;
+    color: #8a6d00;
+    border: 1px solid #fbc02d;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffe082;
+    transform: scale(1.05);
+}
+
+/* ================= IMAGE ================= */
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+/* ================= GALLERY ================= */
+div.gallery {
+    margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
+    float: left;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-progress::-webkit-progress-bar {
-    background-color: #f3f3f3;
-    border-radius: 10px;
+div.gallery:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-progress::-webkit-progress-value {
-    background-color: #4caf50;
-    border-radius: 10px;
+div.gallery img {
+    width: 100%;
 }
 
-progress::-moz-progress-bar {
-    background-color: #4caf50;
+/* ================= CARD ================= */
+.card {
+    background-color: #ffffff;
     border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-body {
-    background-color: #fffacd; /* Light yellow color */
+/* ================= DARK MODE ================= */
+.dark-mode {
+    background-color: #121212;
+    color: #eaeaea;
 }
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 20px; /* Adjust padding as needed */
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #ffffff;
 }
-button {
-    width: 75px;
-    height: 25px;
+
+.dark-mode p,
+.dark-mode marquee {
+    color: #dddddd;
+}
+
+.dark-mode a {
+    color: #ffd54f;
+}
+
+.dark-mode a:hover {
+    color: #ffecb3;
+}
+
+.dark-mode .menu-bar {
+    background-color: #1b1b1b;
+}
+
+.dark-mode .menu-bar ul li a {
+    color: #eaeaea;
+}
+
+.dark-mode .menu-bar ul li a:hover {
+    color: #ffd54f;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .dropdown-menu ul li a {
+    color: #eaeaea;
+}
+
+.dark-mode .button {
+    background-color: #ffd54f;
+    color: #000000;
+}
+
+.dark-mode .button:hover {
+    background-color: #ffeb3b;
+}
+/* ===== DARK MODE - NỀN ĐEN HOÀN TOÀN ===== */
+.dark-mode {
+    background-color: #121212 !important;
+    background-image: none !important; /* xoá gradient vàng */
+    color: #eaeaea;
+}
+/* DARK MODE LINK */
+body.dark-mode a {
+    color: #ffd54f;
+}
+body.dark-mode a:hover {
+    color: #ffecb3;
+}
+
+/* DARK MODE COMMON COMPONENTS */
+body.dark-mode .menu-bar {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #1f1f1f;
+}
+body.dark-mode {
+    background-color: #121212;
+    background-image: none;
+    color: #eaeaea;
 }

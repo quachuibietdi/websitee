@@ -6,15 +6,89 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href = "style.css" rel="stylesheet" type="text/css">
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
-        <title> blogtruyen but better</title>
+        <title> Readora</title>
+        <link rel="stylesheet" href="theme.css">
+  <script src="theme.js"></script>
     </head>
 
     <body>
-        <h1>(not)blogtruyen.net</h1>
-        <h3> Enter your account here</h3>
-        <input type="text" id="fname" name="fname"> <a href = " https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" ><button style ="left : 200px ;top: 119.5px ; position :fixed"> Enter</button></a>
-        <script src="jscript.js"></script>
+         <div class="menu-bar">
+    <h1 class="logo"><a href="home.html">Read<span>ora</span></a></h1>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="main.html">Manga<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="main.html">Truyện nổi bật</a></li>
+                  <li><a href="new.html">Mới</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Support Us</a></li>
+                  <li> <a href = "loginpage.html"> Login</a></li>
+                </ul>
+              </div>
+        </li>
+      </ul>
+    </div>
+    </div>
+        <h3>Truyện nổi bật</h3>
         <marquee rel = "text" style="bottom: 30px ; position: fixed"> the website is under construction, please support us for faster the website finish </marquee>
-        <progress id="project" max="100" value="70" style=" bottom: 50px ;  position: fixed;"> </progress>
+        <div class = "gallery">
+            <a href = "chap1frieren.html">
+                <img src = "bìa truyện'.jpg" alt="Frieren Pháp sư tiễn táng" style="margin-left: auto;" >
+                <h5 style="margin: auto; text-align: center;"> Frieren Pháp sư tiễn táng</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "chap1dandadan.html">
+                <img src = "DanDaDan.jpg" alt="DanDaDan" style="margin-left: auto;" >
+                <h5 style = "margin: auto; text-align: center;"> Dandadan</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "chap1komi.html">
+                <img src = "Cover_Komi.jpg" alt="Komi không thể giao tiếp" style="margin-left: auto;" >
+                <h5 style = "margin: auto; text-align: center;"> Komi Can't Communicate</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "chap1ichi.html">
+                <img src = "Ichi Cover.jpg" alt="Ichi" style="margin-left: auto;" >
+                <h5 style = "margin: auto; text-align: center;"> Ichi - Anh chàng phù thủy</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "#">
+                <img src = "Blue_Lock_vol_1.jpg" alt="Frieren Pháp sư tiễn táng" style="margin-left: auto;" >
+                <h5 style="margin: auto; text-align: center;"> Blue Lock</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "#">
+                <img src = "1manh.jpg" alt="Frieren Pháp sư tiễn táng" style="margin-left: auto;" >
+                <h5 style="margin: auto; text-align: center;"> One Piece</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "#">
+                <img src = "bangaithue.jpg" alt="Frieren Pháp sư tiễn táng" style="margin-left: auto;" >
+                <h5 style="margin: auto; text-align: center;"> Rent A Girlfriend</h5>
+            </a>
+        </div>
+        <div class = "gallery">
+            <a href = "#">
+                <img src = "nhaconamnangdau.jpg" alt="Frieren Pháp sư tiễn táng" style="margin-left: auto;" >
+                <h5 style="margin: auto; text-align: center;"> Nhà có năm nàng dâu</h5>
+            </a>
+        </div>
+        <button onclick="myFunction()" class = "button" style="top: 85px; right: 20px ; position: fixed;">Dark mode</button>
+        <script>
+            function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        </script>
     </body>
 </html>
