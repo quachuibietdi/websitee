@@ -41,11 +41,16 @@
 
     <marquee rel = "text" style="bottom: 20px; position: fixed; "> the website is under construction, please support us for faster the website finish> </marquee>
 
-<button class="button" onclick="toggleDarkMode()">
-    🌙 Dark mode
-</button>
+        <button onclick="myFunction()" class = "button" style="top: 90px; right: 20px ; position: fixed;">Dark mode</button>
+        <script>
+            function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+        </script>
 
 
 
     </body>
+
 </html>
